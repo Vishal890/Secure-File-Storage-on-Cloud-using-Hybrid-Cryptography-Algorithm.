@@ -1,0 +1,105 @@
+create database Endas;
+
+use Endas;
+
+create table user(
+id int(11) NOT NULL auto_increment,
+
+name text,
+pass text,
+email text,
+mobile text,
+addr text,
+dob text,
+gender text,
+pin text,
+location text,
+imagess longblob,
+PRIMARY KEY  (id)
+);
+
+create table ownerreg(
+id int(11) NOT NULL auto_increment,
+
+name text,
+pass text,
+email text,
+mobile text,
+addr text,
+dob text,
+gender text,
+pin text,
+location text,
+imagess longblob,
+PRIMARY KEY  (id)
+);
+
+
+CREATE TABLE admin (
+	username VARCHAR(50),
+	password VARCHAR(50)
+) ;
+
+insert into admin values ('admin','admin');
+
+CREATE TABLE cloud(
+	username VARCHAR(50),
+	password VARCHAR(50)
+) ;
+
+insert into cloud values ('cloud','cloud');
+
+
+CREATE TABLE owner (
+	username VARCHAR(50),
+	password VARCHAR(50)
+) ;
+
+insert into owner values ('owner','owner');
+
+ 
+
+create table cloudserver(
+id int(11) NOT NULL auto_increment,
+
+fname text,
+ct text,
+trapdoor text,
+sk text,
+rank int,
+dt text,
+PRIMARY KEY  (id));
+
+create table request(
+id int(11) NOT NULL auto_increment,
+
+user text,
+search text,
+download text,
+ownerper text,
+PRIMARY KEY  (id));
+
+create table Transaction(
+id int(11) NOT NULL auto_increment,
+user text,
+fname text,
+sk text,
+task text,
+dt text,
+PRIMARY KEY (id));
+
+create table Attacker(
+id int(11) NOT NULL auto_increment,
+user text,
+fname text,
+sk text,
+dt text,
+PRIMARY KEY (id));
+
+create table search(
+id int(11) NOT NULL auto_increment,
+user text,
+keyword text,
+permission text, 
+dt text,
+PRIMARY KEY (id));
